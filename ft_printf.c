@@ -6,11 +6,16 @@
 /*   By: otboumeh <otboumeh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 13:27:34 by otboumeh          #+#    #+#             */
-/*   Updated: 2024/04/30 16:35:21 by otboumeh         ###   ########.fr       */
+/*   Updated: 2024/05/04 16:57:24 by otboumeh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+/*DESCRIPTION:
+1. 'find_specifier' function acts as Index by identifying format specifier,
+to then call to respective functions printing and put_hex. 
+---------------------------------------------------------------------------*/
 
 int	find_specifer(const char *str, int i, int count, va_list list)
 {
@@ -38,6 +43,11 @@ int	find_specifer(const char *str, int i, int count, va_list list)
 	return (count);
 }
 
+/*DESCRIPTION:
+1. Declare macros for variadic functions, then call function 'find_specifier'.
+*Variadic function: a function that takes a variable number of arguments.
+2. printf function returns total sum of printed characters.
+---------------------------------------------------------------------------*/
 int	ft_printf(const char *str, ...)
 {
 	int		i;
