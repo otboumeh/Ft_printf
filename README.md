@@ -20,17 +20,12 @@ The **ft_printf** project is a key exercise in the 42 curriculum that involves c
 - `ft_printf`  
   The main function that emulates the behavior of `printf`. It handles the parsing of the format string, calls the respective functions to print values, and returns the total number of characters printed.
   
-- `ft_putnbr_base`  
+- `put_hex`  
   A helper function used to convert numbers into their respective base (e.g., hexadecimal, decimal).
   
-- `ft_putchar_fd`  
-  Writes a character to the specified file descriptor.
+- `printing`  
+  Writes a character, string, integer to the specified file descriptor.
   
-- `ft_putstr_fd`  
-  Writes a string to the specified file descriptor.
-
-- `ft_putnbr_fd`  
-  Writes an integer to the specified file descriptor.
 
 ---
 
@@ -40,7 +35,7 @@ The **ft_printf** project is a key exercise in the 42 curriculum that involves c
    The function starts by scanning the format string passed to `ft_printf`, checking for format specifiers like `%d`, `%s`, etc.
 
 2. **Handling Each Specifier:**  
-   When a specifier is encountered, the corresponding function is called to handle the conversion (for example, `ft_putnbr_fd` for integers or `ft_putstr_fd` for strings).
+   When a specifier is encountered, the corresponding function is called to handle the conversion (for example, `printing` for integers or `put_hex` for bases).
 
 3. **Memory Management:**  
    Memory for the strings or numbers is handled within the functions, and no memory leaks should occur.
